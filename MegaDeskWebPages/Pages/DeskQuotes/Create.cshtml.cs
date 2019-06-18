@@ -29,9 +29,10 @@ namespace MegaDeskWebPages.Pages.DeskQuotes
         {
           
             _context = context;
-            IQueryable<int> matQuery = from m in _context.Material
-                                          orderby m.MaterialID
-                                          select m.MaterialID;
+            IQueryable<string> matQuery = from m in _context.Material
+                                          orderby m.MaterialType
+                                       select m.MaterialType;
+
             IQueryable<string> delQuery = from d in _context.Delivery
                                           orderby d.RushOrderDay
                                           select d.RushOrderDay;
@@ -111,7 +112,6 @@ namespace MegaDeskWebPages.Pages.DeskQuotes
             NewQuote.QuoteDate = DateTime.Now;
             decimal Area =  NewQuote.Desk.surfaceArea();
             NewQuote.ShippingCost = calcShipPrice(deliveryCost, Area);
-
             NewQuote.DeskPrice = calcPrice(materialPrice,Area, NewQuote.ShippingCost, NewQuote.Desk.NumDrawers*25);
 
 
