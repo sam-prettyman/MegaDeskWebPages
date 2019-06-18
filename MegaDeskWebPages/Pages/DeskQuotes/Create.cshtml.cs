@@ -92,16 +92,17 @@ namespace MegaDeskWebPages.Pages.DeskQuotes
             //
             // Convert DeliveryID to DeliveryCost
             //
-            decimal deliveryCost = NewQuote.DeliveryID;
-            switch (deliveryCost)
+            String deliveryType = NewQuote.Delivery.RushOrderDay;
+            decimal deliveryCost = 0;
+            switch (deliveryType)
             {
-                case 1:
+                case "3 Day":
                     deliveryCost = 3;
                     break;
-                case 2:
+                case "5 Day":
                     deliveryCost = 5;
                     break;
-                case 3:
+                case "7 Day":
                     deliveryCost = 7;
                     break;
                 default:

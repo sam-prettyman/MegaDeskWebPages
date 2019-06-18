@@ -7,6 +7,8 @@
 
 <h2>Index</h2>
 
+
+
 <p>
     <a asp-page="Create">Create New</a>
 </p>
@@ -28,10 +30,10 @@
             </th>
             <th>
                 <a asp-action="Index" asp-route-OrderBy="customerName">@Html.DisplayNameFor(model => model.DeskQuote[0].CustomerName)</a>
-</th>
+            </th>
             <th>
                 <a asp-action="Index" asp-route-OrderBy="quoteDate">@Html.DisplayNameFor(model => model.DeskQuote[0].QuoteDate)</a>
-</th>
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].ShippingCost)
             </th>
@@ -42,32 +44,33 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.DeskQuote) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Desk.Material.MaterialType)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Delivery.RushOrderDay)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CustomerName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.QuoteDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ShippingCost)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DeskPrice)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.DeskQuoteID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.DeskQuoteID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.DeskQuoteID">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model.DeskQuote)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Desk.Material.MaterialType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Delivery.RushOrderDay)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.QuoteDate)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ShippingCost)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeskPrice)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.DeskQuoteID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.DeskQuoteID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.DeskQuoteID">Delete</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
