@@ -72,18 +72,18 @@ namespace MegaDeskWebPages.Pages.DeskQuotes
             decimal materialPrice = NewQuote.Desk.MaterialID;
             switch (materialPrice)
             {
-                case 2002:
+                case 1:
                     materialPrice = 200;
                     break;
-                case 2003:
+                case 2:
                     materialPrice = 100;
                     break;
-                case 2004:
+                case 3:
                     materialPrice = 50;
                     break;
-                case 2005:
+                case 4:
                     materialPrice = 125; break;
-                case 2006:
+                case 5:
                     materialPrice = 200; break;
                 default:
                     materialPrice = 200; break;
@@ -94,13 +94,13 @@ namespace MegaDeskWebPages.Pages.DeskQuotes
             decimal deliveryCost = NewQuote.DeliveryID;
             switch (deliveryCost)
             {
-                case 4002:
+                case 1:
                     deliveryCost = 3;
                     break;
-                case 4003:
+                case 2:
                     deliveryCost = 5;
                     break;
-                case 4007:
+                case 3:
                     deliveryCost = 7;
                     break;
                 default:
