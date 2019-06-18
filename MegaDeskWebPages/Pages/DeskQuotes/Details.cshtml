@@ -1,0 +1,55 @@
+﻿@page
+@model MegaDeskWebPages.Pages.DeskQuotes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DeskQuote</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.Desk)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.Desk.DeskID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.Delivery)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.Delivery.DeliveryID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.CustomerName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.CustomerName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.QuoteDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.QuoteDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.ShippingCost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.ShippingCost)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DeskQuote.DeskPrice)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DeskQuote.DeskPrice)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.DeskQuote.DeskQuoteID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,42 @@
+﻿@page
+@model MegaDeskWebPages.Pages.Deliveries.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Delivery[0].RushOrderDay)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Delivery[0].Days)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Delivery) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.RushOrderDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Days)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.DeliveryID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.DeliveryID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.DeliveryID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

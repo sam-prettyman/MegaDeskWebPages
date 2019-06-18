@@ -1,0 +1,60 @@
+﻿@page
+@model MegaDeskWebPages.Pages.DeskQuotes.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>DeskQuote</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DeskQuote.DeskQuoteID" />
+            <div class="form-group">
+                <label asp-for="DeskQuote.DeskID" class="control-label"></label>
+                <select asp-for="DeskQuote.DeskID" class="form-control" asp-items="ViewBag.DeskID"></select>
+                <span asp-validation-for="DeskQuote.DeskID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeskQuote.DeliveryID" class="control-label"></label>
+                <select asp-for="DeskQuote.DeliveryID" class="form-control" asp-items="ViewBag.DeliveryID"></select>
+                <span asp-validation-for="DeskQuote.DeliveryID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeskQuote.CustomerName" class="control-label"></label>
+                <input asp-for="DeskQuote.CustomerName" class="form-control" />
+                <span asp-validation-for="DeskQuote.CustomerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeskQuote.QuoteDate" class="control-label"></label>
+                <input asp-for="DeskQuote.QuoteDate" class="form-control" />
+                <span asp-validation-for="DeskQuote.QuoteDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeskQuote.ShippingCost" class="control-label"></label>
+                <input asp-for="DeskQuote.ShippingCost" class="form-control" />
+                <span asp-validation-for="DeskQuote.ShippingCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeskQuote.DeskPrice" class="control-label"></label>
+                <input asp-for="DeskQuote.DeskPrice" class="form-control" />
+                <span asp-validation-for="DeskQuote.DeskPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
