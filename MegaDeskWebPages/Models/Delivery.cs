@@ -10,6 +10,5 @@ namespace MegaDeskWebPages.Models
         public int DeliveryID { get; set; }
         public string RushOrderDay { get; set; }
         public int Days { get; set; }
-
     }
 }
