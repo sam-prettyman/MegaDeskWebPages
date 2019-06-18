@@ -10,18 +10,30 @@ namespace MegaDeskWebPages.Models
     {
         const decimal BASE_PRICE = 200;
 
+        [Display(Name = "Desk Quote ID")]
         public int DeskQuoteID { get; set; }
         //link desk
+
+        [Display(Name = "Desk ID")]
         public int DeskID { get; set; }
         public Desk Desk { get; set; }
         // link delivery 
+
+        [Display(Name = "Delivery ID")]
         public int DeliveryID { get; set; }
         public Delivery Delivery { get; set; }
+
+        [Display(Name = "Customer Name")]
         public string CustomerName { get; set; }
 
+        [Display(Name = "Quote Date")]
         [DataType(DataType.Date)]
         public DateTime QuoteDate { get; set; }
+
+        [Display(Name = "Shipping Cost")]
         public decimal ShippingCost { get; set; }
+
+        [Display(Name = "Desk Price")]
         public decimal DeskPrice { get; set; }
 
         //

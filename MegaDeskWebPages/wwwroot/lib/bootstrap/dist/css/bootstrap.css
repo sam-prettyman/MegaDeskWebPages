@@ -5,9 +5,9 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+    font-family: 'Permanent Marker', cursive;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 body {
   margin: 0;
@@ -64,7 +64,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 4em;
   margin: 0.67em 0;
 }
 mark {
@@ -72,7 +72,7 @@ mark {
   color: #000;
 }
 small {
-  font-size: 80%;
+  font-size: 100%;
 }
 sub,
 sup {
