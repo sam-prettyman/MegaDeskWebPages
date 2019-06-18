@@ -10,6 +10,13 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+
+<form>
+    <p>
+        Search Customer Name: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
 <table class="table">
     <thead>
         <tr>
@@ -20,11 +27,11 @@
                 @Html.DisplayNameFor(model => model.DeskQuote[0].Delivery)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].CustomerName)
-            </th>
+                <a asp-action="Index" asp-route-OrderBy="customerName">@Html.DisplayNameFor(model => model.DeskQuote[0].CustomerName)</a>
+</th>
             <th>
-                @Html.DisplayNameFor(model => model.DeskQuote[0].QuoteDate)
-            </th>
+                <a asp-action="Index" asp-route-OrderBy="quoteDate">@Html.DisplayNameFor(model => model.DeskQuote[0].QuoteDate)</a>
+</th>
             <th>
                 @Html.DisplayNameFor(model => model.DeskQuote[0].ShippingCost)
             </th>
@@ -38,10 +45,10 @@
 @foreach (var item in Model.DeskQuote) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Desk.MaterialID)
+                @Html.DisplayFor(modelItem => item.Desk.Material.MaterialType)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Delivery.DeliveryID)
+                @Html.DisplayFor(modelItem => item.Delivery.RushOrderDay)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CustomerName)

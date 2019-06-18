@@ -3,6 +3,9 @@ for details on configuring this project to bundle and minify static web assets. 
 body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: url(https://3.bp.blogspot.com/-f2XX6_CJNNc/VCaHU7fHwJI/AAAAAAAAGig/ORo4Kah5u-Q/s1600/simple-gray-texture.jpg);
+    font-size: 20px;
+    font-family: 'Permanent Marker', cursive;
 }
 
 /* Wrapping element */

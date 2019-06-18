@@ -15,8 +15,11 @@ namespace MegaDeskWebPages.Models
         [Range(12, 48)]
         public int Depth { get; set; }
 
+        [Display(Name = "Number of Drawers")]
         [Range(0, 7)]
         public int NumDrawers { get; set; }
+
+        [Display(Name = "Material ID")]
         public int MaterialID { get; set; }
         public Material Material { get; set; }
 
